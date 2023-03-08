@@ -24,6 +24,8 @@ Test data is in data/transactionMockData.js file.
 
 when the application is running and navigate to http://localhost:3000. It will display 5 Buttons and please click on the buttons sequentially as each of the operations are dependent on the previous method.
 
+To view the results, you can open the dev tools or inspect the webpage and navigate to console
+
 1. Update Orders to reflect months button will update the data with adding monthly property to it.
 2. Individual Customer Orders button will log the transcations based on customers.
 3. Monthly Customer Orders button will log the transactions as per the month from test data.
