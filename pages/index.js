@@ -72,7 +72,7 @@ export default function Home() {
     console.log('customer based monthly orders', customerMonthlyOrders);
 
     const totalTranscationData = [];
-    function TotalRewards() {
+    function totalRewardsCalculation() {
         totalCustomerOrders.forEach(transaction => {
             let totalRewards = 0;
             const name = transaction[0].customerName;
@@ -122,7 +122,7 @@ export default function Home() {
                 <button onClick={monthlyTransactions}>Update Orders to reflect months</button>
                 <button onClick={customerBasedOrders}>Individual Customer Orders</button>
                 <button onClick={monthlyOrders}>Monthly Customer Orders</button>
-                <button onClick={TotalRewards}>Total Rewards</button>
+                <button onClick={totalRewardsCalculation}>Total Rewards</button>
                 <button onClick={monthlyCustomerRewards}>Monthly Rewards</button>
             </div>
 
