@@ -2,6 +2,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+This assessment is implemented in Next js.
+
 Required applications to install and run the project
  1. Node Version 18 or newer
 
@@ -20,7 +22,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can find the code in pages/index.js file.
 Test data is in data/transactionMockData.js file.
 
-when the application is running and navigate to http://localhost:3000. It will display 5 Buttons 
+when the application is running and navigate to http://localhost:3000. It will display 5 Buttons and please click on the buttons sequentially as each of the operations are dependent on the previous method.
 
 1. Update Orders to reflect months button will update the data with adding monthly property to it.
 2. Individual Customer Orders button will log the transcations based on customers.
