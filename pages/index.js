@@ -1,26 +1,5 @@
-// import { React, useEffect, useState } from "react";
-// import { fetch } from '../data/transactionMockData';
-
-// function RewardsPage() {
-
-
-//     useEffect(() => {
-//         fetch().then((data) => {
-//             setTranscationData(data.json());
-//         });
-//         let points = RewardsCalculation(120);
-//         setCustomerPoints(points);
-//     }, [])
-
-//     return <div>Customer total points are {customerPoints} and data is {transcationdata} </div>
-// }
-
-// export default RewardsPage
-
-import { React, useEffect, useState } from 'react'
+import { React, useState } from 'react'
 import { historyData } from '../data/transactionMockData';
-
-
 
 export default function Home() {
 
@@ -29,7 +8,6 @@ export default function Home() {
     const [monthlyRewards, setMonthlyRewards] = useState(null);
     const [totalCustomerOrders, setTotalCustomerOrders] = useState([]);
     const [customerMonthlyOrders, setCustomerMonthlyOrders] = useState(null);
-    const [months, setMonths] = useState(null);
 
     function RewardsCalculation(amount) {
         let totalPoints = 0;
@@ -119,15 +97,12 @@ export default function Home() {
             let customer;
             const month = transaction[0].monthOfOrder;
             transaction.map((item, index) => {
-                // let count = 0;
                 const rewardsPerTranscation = RewardsCalculation(parseInt(item.orderAmount));
                 totalRewards = totalRewards + rewardsPerTranscation;
                 customer = item.customerName;
-                // console.log('next val', transaction[index + 1].customerName);
                 if (index < transaction.length && item.customerName !== transaction[index + 1].customerName) {
                     monthlyRewardsForCustomers.push({ indexOfMonth: month + 1, nameOfcustomer: customer, totalRewards: totalRewards });
                 }
-                // count = count + 1;
             })
             monthlyRewardsForCustomers.push({ indexOfMonth: month + 1, nameOfcustomer: customer, totalMonthlyRewards: totalRewards });
 
