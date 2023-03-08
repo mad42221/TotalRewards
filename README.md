@@ -5,7 +5,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 Required applications to install and run the project
  1. Node Version 18 or newer
 
-First, run the development server:
+First, install the packages using npm install and run the development server:
 
 ```bash
 npm run dev
